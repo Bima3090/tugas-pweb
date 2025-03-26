@@ -133,6 +133,8 @@ nav ul li a:hover {
 .section {
     padding: 40px 80px;
     text-align: justify;
+    font-weight: 300;
+    font-size: large;
 }
 
 /* Galeri */
