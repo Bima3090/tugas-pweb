@@ -5,6 +5,7 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -42,6 +43,8 @@ nav ul li a:hover {
     background: darkblue;
     border-radius: 5px;
 }
+
+/* Hero Section */
 .hero {
     position: relative;
     height: 100vh;
@@ -51,9 +54,9 @@ nav ul li a:hover {
     text-align: center;
     color: white;
     background: url('logo.png') no-repeat center center;
-    background-size: contain; /* Sesuaikan ukuran logo */
-    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang gelap transparan */
-    background-blend-mode: multiply; /* Meningkatkan kontras dengan teks */
+    background-size: contain;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
 }
 
 .hero-text {
@@ -71,6 +74,7 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
+/* Tombol */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -86,34 +90,43 @@ nav ul li a:hover {
     background-color: darkred;
 }
 
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background: yellow;
-    color: black;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.btn:hover {
-    background: red;
-    color: white;
-}
-
+/* Section */
 .section {
-    padding: 50px 10%;
+    padding: 40px 80px;
     text-align: justify;
+}
+
+/* Galeri */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .gallery img {
     width: 100%;
-    max-width: 600px;
-    margin: 10px 0;
+    max-width: 500px;
+    height: auto;
     border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s;
 }
 
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Grid layout untuk layar besar */
+@media (min-width: 768px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Footer */
 footer {
     background: black;
     color: white;
